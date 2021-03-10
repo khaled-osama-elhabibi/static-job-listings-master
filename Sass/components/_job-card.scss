@@ -1,0 +1,98 @@
+.job-card{
+    /*to be removed*/
+    margin: 50px auto;
+    /*to be removed*/
+    width: 83%;
+    height: 153px;
+    margin-left:auto;
+    margin-right:auto;
+
+    box-shadow: 0 .4rem 3rem rgba($color-black, $alpha: .4) ;
+    border-radius: 5px;
+    background-color: $color-white;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    &__details{
+        justify-self: center;
+        width: 40%;
+        height: 100%;
+        padding: 25px; 
+        padding-left: 45px;
+        display: flex;
+        flex-flow: row nowrap;
+        &-section-1{
+            display: flex;
+            flex-flow: column wrap;
+            width: 100%;
+            margin-left: 20px;
+            &-1,&-2,&-3{
+               height: 33%;
+               display: flex;
+               flex-flow: row nowrap;
+               align-items: center;
+            }
+            &-2{
+                cursor: pointer;
+                &:hover{
+                    color: $color-primary;
+                }
+            }
+            &-3{justify-content: space-between;}
+        }
+    }
+    &__company{           
+        color: $color-primary;
+        font-weight: 600;
+        margin-right: 17px;
+    }
+    &__position{
+        font-size: 19px;
+        font-weight: 600;
+    }
+    &__posted-at , &__contract , &__location{color: $color-secondary;}
+    &__logo{
+        display: inline-block;
+        align-self: center;
+        width: 90px;
+        height: auto;
+    }
+    &__new,&__featured{
+        text-transform: uppercase;
+        padding: 2px 11px;
+        font-size: 12px;
+        font-weight: 500;
+        border-radius: 12px;
+        color: $color-white;
+    }
+    &__featured{background-color: #2b3837;}
+    &__new{background-color: $color-primary; margin-right:10px;}
+    &__keywords{
+        align-items: center;
+        margin-right: 50px;
+         
+        align-self: center;
+        display: flex;
+        flex-flow: row nowrap;
+        &-item{
+            background-color: $color-primary-light;
+            color: $color-primary;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 5px 8px;
+            border-radius: 5px;
+            &:hover{
+                cursor: pointer;
+                background-color: $color-primary;
+                color: $color-primary-light;    
+            }
+            &:not(:first-child)
+            {
+                margin-left: 15px;
+            }
+        }
+    }
+    &--featured{
+        border-left: 6px solid $color-primary;
+    }
+}
