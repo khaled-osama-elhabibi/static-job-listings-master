@@ -33,7 +33,9 @@ class JobCard{
           
                 <div class="job-card__details-section-1-3">
                     <div class="job-card__posted-at">${postedAt}</div>
-                    <div class="job-card__contract">${contract}</div> 
+                    <div class="dot">.</div>  
+                    <div class="job-card__contract">${contract}</div>
+                    <div class="dot">.</div>   
                     <div class="job-card__location">${location}</div> 
                 </div> 
             </div>
