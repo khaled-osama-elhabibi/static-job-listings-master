@@ -56,6 +56,7 @@ class JobList{
               </div> 
           </div>
       </div>
+      <div class = "job-card__line"></div>
       <div class="job-card__keywords"></div>
       `;
 

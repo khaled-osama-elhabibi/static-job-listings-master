@@ -1,4 +1,5 @@
-let jobs = [
+let jobs = 
+[
     {
       "id": 1,
       "company": "Photosnap",
@@ -149,7 +150,8 @@ let jobs = [
       "languages": ["JavaScript"],
       "tools": ["React", "Sass"]
     }
-  ]
+]
+
 let root = document.getElementById('root');
 root.innerHTML = `
 <div class="section-main">
@@ -162,4 +164,5 @@ root.innerHTML = `
   Coded by <a href="https://github.com/khaled-osama-elhabibi" target="_blank">Khaled Osama</a>.
 </div>
 `;
+
 let jobsList = new JobList(jobs,document.getElementById('jobs-container'));

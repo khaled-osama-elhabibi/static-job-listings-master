@@ -16,9 +16,13 @@
     top: 156px;
     transform: translateX(-50%) translateY(-50%);
     padding: 20px 40px;
+    @media only screen and (max-width: $bp-medium) {
+        width: 665px;            
+    }
+
     &__container{
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: row wrap;
         justify-content: space-between;
     
     }
@@ -50,9 +54,12 @@
     &__clear{
         cursor: pointer;
         align-self: center;
-        color: $color-primary;
+        color: $color-secondary;
         font-weight: 600;
         font-size: 16px; 
-        border-bottom: 1px solid $color-primary;
+        &:hover{
+            color: $color-primary;
+            border-bottom: 1px solid $color-primary;
+        }
     }
 }
