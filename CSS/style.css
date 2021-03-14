@@ -186,9 +186,12 @@ body {
   top: 156px;
   transform: translateX(-50%) translateY(-50%);
   padding: 20px 40px; }
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 1140px) {
     .jobs-filtering {
       width: 665px; } }
+  @media only screen and (max-width: 760px) {
+    .jobs-filtering {
+      width: 90%; } }
   .jobs-filtering__container {
     display: flex;
     flex-flow: row wrap;
