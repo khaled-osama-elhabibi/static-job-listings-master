@@ -3,7 +3,7 @@
 @import "Sass/base/";
 @import "Sass/components/"; 
 @import "Sass/layout/";
-@import "Sass/pages/"; 
+@import "Sass/vendor/"; 
 */
 *, *::after, *::before {
   padding: 0;
@@ -12,6 +12,12 @@
 
 body {
   font-family: Poppins; }
+
+.attribution {
+  font-size: 11px;
+  text-align: center; }
+  .attribution a {
+    color: #3e52a3; }
 
 .job-card {
   margin: 50px auto;

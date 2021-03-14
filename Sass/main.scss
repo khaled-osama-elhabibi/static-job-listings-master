@@ -3,13 +3,15 @@
 @import "Sass/base/";
 @import "Sass/components/"; 
 @import "Sass/layout/";
-@import "Sass/pages/"; 
+@import "Sass/vendor/"; 
 */  
 @import "Sass/abstracts/variables";
 
 @import "Sass/base/base";   
 
+@import "Sass/vendor/attribution";
+
 @import "Sass/components/job-card"; 
 @import "Sass/components/job-filtering"; 
 
-@import "Sass/layout/section-main";
+@import "Sass/layout/section-main"; 
