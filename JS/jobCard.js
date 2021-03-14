@@ -93,7 +93,8 @@ class JobList{
       <span class="material-icons jobs-filtering__item-icon">close</span>
     `;
     jobsFilteringItem.getElementsByClassName('jobs-filtering__item-icon')[0].addEventListener('click',()=>{
-      this.removeKeyword(keyword) ;
+      
+      this.removeKeyword(keyword , jobsFilteringItem) ;
     })
     document.getElementById('jobs-filtering__container').append(jobsFilteringItem);
   }
@@ -123,7 +124,7 @@ class JobList{
       this.addSearchingKeyword(element)
     }
   }
-  removeKeyword(keyword){
+  removeKeyword(keyword , jobsFilteringItem){
     this.jobFilteringItemsCurr.currItems = this.jobFilteringItemsCurr.currItems.filter(element => element !== keyword);
     jobsFilteringItem.remove() ;
     if(this.jobFilteringItemsCurr.currItems.length === 0){this.resetAll();}
