@@ -12,14 +12,14 @@
     justify-content: space-between;
 
     position: relative;
-    @media only screen and (max-width: $bp-medium) {
+    @media only screen and (max-width: $bp-large) {
         &:first-child{
             margin-top: 75px;
         }
         flex-flow: column nowrap;
         width: 665px;            
     }
-    @media only screen and (max-width: $bp-small) {
+    @media only screen and (max-width: $bp-medium) {
         width: 90%;            
     }
     &__details{
@@ -29,10 +29,10 @@
         padding-left: 45px;
         display: flex;
         flex-flow: row nowrap;
-        @media only screen and (max-width: $bp-medium) {
+        @media only screen and (max-width: $bp-large) {
             width: 460px;            
         }   
-        @media only screen and (max-width: $bp-very-small) {
+        @media only screen and (max-width: $bp-small) {
             width: 350px;            
             padding: 40px 17px 17px;
         }   
@@ -84,7 +84,7 @@
         align-self: center;
         width: 90px;
         height: auto;
-        @media only screen and (max-width: $bp-very-small) {
+        @media only screen and (max-width: $bp-small) {
             position: absolute ;
             top: -24px;
             left: 10px;
@@ -107,10 +107,10 @@
         border-bottom: 1px solid rgba($color-secondary, .4) ;
         width: 80%;
         display: none;
-        @media only screen and (max-width: $bp-medium) {
+        @media only screen and (max-width: $bp-large) {
             display: inline-block;
         }
-        @media only screen and (max-width: $bp-very-small) {
+        @media only screen and (max-width: $bp-small) {
             width: 90%;            
         }   
     }
@@ -120,11 +120,11 @@
         align-self: center;
         display: flex;
         flex-flow: row nowrap;
-        @media only screen and (max-width: $bp-medium) {
+        @media only screen and (max-width: $bp-large) {
             margin-right: 0px;
             padding: 20px 20px 0px 20px;
         }
-        @media only screen and (max-width: $bp-very-small) {
+        @media only screen and (max-width: $bp-small) {
             flex-wrap: wrap;   
         }
         &-item{
@@ -135,7 +135,7 @@
             padding: 5px 8px;
             border-radius: 5px;
             margin-left: 15px;
-            @media only screen and (max-width: $bp-medium) {
+            @media only screen and (max-width: $bp-large) {
                 margin-bottom: 20px;
             }    
             &:hover{
