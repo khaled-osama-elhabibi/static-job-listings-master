@@ -3,7 +3,7 @@
 @import "Sass/base/";
 @import "Sass/components/"; 
 @import "Sass/layout/";
-@import "Sass/pages/";                 
+@import "Sass/pages/"; 
 */
 *, *::after, *::before {
   padding: 0;
@@ -102,13 +102,6 @@ body {
   .job-card--featured {
     border-left: 6px solid #5da5a4; }
 
-.section-main {
-  background-color: #f0fafb;
-  overflow: hidden; }
-
-.background-header {
-  background-color: #5da5a4; }
-
 .jobs-filtering {
   width: 83%;
   margin-left: auto;
@@ -153,8 +146,17 @@ body {
       .jobs-filtering__item-icon:hover {
         background-color: #000; }
   .jobs-filtering__clear {
+    cursor: pointer;
     align-self: center;
     color: #5da5a4;
     font-weight: 600;
     font-size: 16px;
     border-bottom: 1px solid #5da5a4; }
+
+.section-main {
+  background-color: #f0fafb;
+  overflow: hidden;
+  min-height: 100vh; }
+
+.background-header {
+  background-color: #5da5a4; }
