@@ -15,6 +15,9 @@ html {
   @media only screen and (max-width: 560px) {
     html {
       font-size: 56.25%; } }
+  @media only screen and (max-width: 359px) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: Poppins; }
@@ -60,6 +63,9 @@ body {
       .job-card__details {
         width: 320px;
         padding: 47px 20px 20px; } }
+    @media only screen and (max-width: 359px) {
+      .job-card__details {
+        width: 250px; } }
     .job-card__details-section-1 {
       display: flex;
       flex-flow: column wrap;
@@ -85,10 +91,13 @@ body {
           display: inline-block;
           height: fit-content;
           font-size: 3.0rem; }
+          @media only screen and (max-width: 1140px) {
+            .job-card__details-section-1-3 .dot {
+              margin: 0 0 16px 0; } }
   .job-card__company {
     color: #5da5a4;
     font-weight: 600;
-    margin-right: 17px;
+    margin-right: 10px;
     font-size: 1.6rem; }
   .job-card__position {
     font-size: 1.9rem;
@@ -105,7 +114,7 @@ body {
       .job-card__logo {
         position: absolute;
         top: -33px;
-        left: 10px;
+        left: 18px;
         width: 66px; } }
   .job-card__new, .job-card__featured {
     text-transform: uppercase;
@@ -225,3 +234,7 @@ body {
 
 .background-header {
   background-color: #5da5a4; }
+
+/*
+responsive till width : 270px ; 
+*/
