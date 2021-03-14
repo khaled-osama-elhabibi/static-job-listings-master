@@ -33,14 +33,17 @@
             width: 460px;            
         }   
         @media only screen and (max-width: $bp-small) {
-            width: 350px;            
-            padding: 40px 17px 17px;
+            width: 320px;            
+            padding: 47px 20px 20px;
         }   
         &-section-1{
             display: flex;
             flex-flow: column wrap;
             width: 100%;
             margin-left: 20px;
+            @media only screen and (max-width: $bp-small) {
+                margin-left: 0px;    
+            }   
             &-1,&-2,&-3{
                height: 33%;
                display: flex;
@@ -86,9 +89,9 @@
         height: auto;
         @media only screen and (max-width: $bp-small) {
             position: absolute ;
-            top: -24px;
+            top: -33px;
             left: 10px;
-            width: 65px ; 
+            width: 66px ; 
         }
 
     }
@@ -122,7 +125,7 @@
         flex-flow: row nowrap;
         @media only screen and (max-width: $bp-large) {
             margin-right: 0px;
-            padding: 20px 20px 0px 20px;
+            padding: 20px 20px 0px 0px;
         }
         @media only screen and (max-width: $bp-small) {
             flex-wrap: wrap;   
@@ -137,6 +140,7 @@
             margin-left: 15px;
             @media only screen and (max-width: $bp-large) {
                 margin-bottom: 20px;
+                margin-left: 20px;
             }    
             &:hover{
                 cursor: pointer;
