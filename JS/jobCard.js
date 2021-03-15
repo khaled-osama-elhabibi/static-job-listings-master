@@ -147,7 +147,8 @@ class JobList{
       }
     }
     document.getElementById('jobs-filtering').remove() ;
-    this.adjustJobContMargin() ;  
+    document.getElementById('jobs-container').style.marginTop = '100px';
+    
 
   }
   /**
