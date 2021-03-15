@@ -15,25 +15,13 @@
     left: 50%;
     top: 156px;
     transform: translateX(-50%) translateY(-50%);
-    padding: 20px 40px;
-    @media only screen and (max-width: $bp-large) {
-        width: 665px;            
-    }
-    @media only screen and (max-width: $bp-medium) {
-        width: 90%;            
-    }
-    @media only screen and (max-width: $bp-small) {
-        //width: 665px;            
-    }
-    @media only screen and (max-width: $bp-very-small) {
-        //width: 665px;            
-    }
-
+    padding: 20px;
+    @media only screen and (max-width: $bp-large) {width: 665px;}
+    @media only screen and (max-width: $bp-medium) {width: 90%;}
     &__container{
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
-    
+        justify-content: flex-start;
     }
     &__item{
         display: flex;
@@ -65,7 +53,7 @@
         align-self: center;
         color: $color-secondary;
         font-weight: 600;
-        font-size: 16px; 
+        font-size: 1.4rem; 
         &:hover{
             color: $color-primary;
             border-bottom: 1px solid $color-primary;

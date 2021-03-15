@@ -1,5 +1,8 @@
+.jobs-container{
+    margin-bottom: 100px;
+}
 .job-card{
-    margin: 50px auto;
+    margin: 5rem auto;
     width: 83%;
     margin-left:auto;
     margin-right:auto;
@@ -13,9 +16,6 @@
 
     position: relative;
     @media only screen and (max-width: $bp-large) {
-        &:first-child{
-            margin-top: 75px;
-        }
         flex-flow: column nowrap;
         width: 665px;            
     }

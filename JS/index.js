@@ -164,5 +164,6 @@ root.innerHTML = `
   Coded by <a href="https://github.com/khaled-osama-elhabibi" target="_blank">Khaled Osama</a>.
 </div>
 `;
+document.getElementById('jobs-container').style.marginTop = '100px';
 
 let jobsList = new JobList(jobs,document.getElementById('jobs-container'));

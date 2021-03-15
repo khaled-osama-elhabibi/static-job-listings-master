@@ -5,6 +5,7 @@ class JobList{
     this.jobCards = [] ;
     this.jobFilteringItemsCurr = { currItems : [] , currCards : []} ;
     this.jobFilteringItemsStat = {} ;
+    this.jobFilteringHeight = 0 ;
     jobs.forEach(element => {this.addJobCardToContainer(element,jobsCardsContainer);});
   }
   /**
@@ -14,6 +15,7 @@ class JobList{
    * 2-Add a filtering section to the page .
    * 3-Add a searching keyword to the filtering section .
    */
+
   addJobCardToContainer({
     company , 
     logo , 
@@ -94,10 +96,10 @@ class JobList{
       <span class="material-icons jobs-filtering__item-icon">close</span>
     `;
     jobsFilteringItem.getElementsByClassName('jobs-filtering__item-icon')[0].addEventListener('click',()=>{
-      
       this.removeKeyword(keyword , jobsFilteringItem) ;
     })
     document.getElementById('jobs-filtering__container').append(jobsFilteringItem);
+    this.adjustJobContMargin(); 
   }
   /**
    * Methods concerning the filtering section
@@ -106,6 +108,7 @@ class JobList{
    * 2-Remove a keword from the filter section .
    * 3-Remove the filter section . 
    */
+
   searchByKeyword(element){
     if(!this.jobFilteringItemsCurr.currItems.includes(element)){
       if(!(element in this.jobFilteringItemsStat)){
@@ -133,6 +136,7 @@ class JobList{
       this.jobFilteringItemsCurr.currCards = this.jobFilteringItemsCurrItems() ;
       this.viewAllWithInd(this.jobFilteringItemsCurr.currCards);
     }
+    this.adjustJobContMargin(); 
   }
   resetAll(){
     this.jobFilteringItemsCurr.currCards = [] ;
@@ -143,10 +147,13 @@ class JobList{
       }
     }
     document.getElementById('jobs-filtering').remove() ;
+    this.jobFilteringHeight = 0; 
+
   }
   /**
    * Helper methods
    */
+
   checkForExistenceKeyword(keyword){
     /**
      * return all idices of the job cards which have the required keyword 
@@ -182,5 +189,18 @@ class JobList{
     })
     return resultarr ;
   }
-  intersection( array1 , array2 ){return array1.filter(value => array2.includes(value));}
+  intersection( array1 , array2 ){
+    return array1.filter(value => array2.includes(value));
+  }
+  adjustJobContMargin() {
+    this.marginOriginal = '100px' ;
+    let heightDiff = document.getElementById('jobs-filtering').clientHeight - this.jobFilteringHeight ;
+    if( heightDiff !== 0) {
+      this.jobFilteringHeight = document.getElementById('jobs-filtering').clientHeight ;
+      if(heightDiff < 79){
+        document.getElementById('jobs-container').style.marginTop = 
+        `${parseInt(document.getElementById('jobs-container').style.marginTop) + heightDiff}px`;    
+      }
+    }
+  }
 }
