@@ -136,7 +136,7 @@ class JobList{
       this.jobFilteringItemsCurr.currCards = this.jobFilteringItemsCurrItems() ;
       this.viewAllWithInd(this.jobFilteringItemsCurr.currCards);
     }
-    this.adjustJobContMargin(); 
+    this.adjustJobContMargin() ; 
   }
   resetAll(){
     this.jobFilteringItemsCurr.currCards = [] ;
@@ -147,7 +147,7 @@ class JobList{
       }
     }
     document.getElementById('jobs-filtering').remove() ;
-    this.jobFilteringHeight = 0; 
+    this.adjustJobContMargin() ;  
 
   }
   /**
